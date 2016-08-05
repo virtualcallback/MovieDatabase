@@ -1,0 +1,32 @@
+<div th:fragment="main_content">
+
+	<div class="container pad-top">
+		<a href="/movies/create" class="btn-primary btn-lg">Add New Movie</a>
+		<br /> <br />
+
+		<h3>All Movies</h3>
+
+		<table class="table movies">
+			<tr>
+				<th>Image</th>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Release date</th>
+			</tr>
+			<tr th:each="movie : ${movies}">
+				<td><img th:attr="src=${movie.image_url}"
+					style="width: 40px; height: 60px;" /></td>
+				<td th:text="${movie.name}"></td>
+				<td th:text="${movie.description}"></td>
+				<td th:text="${movie.release_date}"></td>
+				<td><a th:href="${'/movies/' + movie.id}"
+					class="btn btn-primary">View</a></td>
+				<td>
+					<form th:action="${'/movies/delete/' + movie.id}" method="POST">
+						<input type="submit" class="btn btn-danger" value="Delete" />
+					</form>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

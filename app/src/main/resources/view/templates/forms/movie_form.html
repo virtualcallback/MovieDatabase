@@ -1,0 +1,44 @@
+<div th:fragment="movie_form">
+
+	<input type="hidden" id="id" th:field="*{id}" />
+	
+	<label for="name" class="col-sm-2">Name</label>
+	<div class="col-sm-10">
+		<input type="text" class="form-control" id="name" th:field="*{name}" placeholder="Movie Name" />
+	</div>
+	
+	<label for="description" class="col-sm-2">Description</label>
+	<div class="col-sm-10">
+		<input type="text" class="form-control" id="description" th:field="*{description}" placeholder="Movie Description" />
+	</div>
+	
+	<label for="director" class="col-sm-2">Director</label>
+	<div class="col-sm-10">
+		<input type="text" class="form-control" id="director" th:field="*{director}" placeholder="Movie Director" />
+	</div>
+	
+	<label for="releaseDate" class="col-sm-2">Release Date</label>
+	<div class="col-sm-10">
+		<input type="text" class="form-control" id="releaseDate" th:field="*{release_date}" placeholder="Movie Release Date" />
+	</div>
+	
+	<label for="leadingActor" class="col-sm-2">Leading Actor</label>
+	<div class="col-sm-10">
+		<input type="text" class="form-control" id="leadingActor" th:field="*{leading_actor}" placeholder="Movie Leading Actor" />
+	</div>
+	
+	<label for="genre" class="col-sm-2">Genre</label>
+	<div class="col-sm-10">
+		<input type="text" class="form-control" id="genre" th:field="*{genre}" placeholder="Genre" />
+	</div>
+	
+	<label for="imageUrl" class="col-sm-2">Image</label>
+	<div class="col-sm-10">
+		<input type="text" class="form-control" id="imageUrl" th:field="*{image_url}" placeholder="Image Url" />
+	</div>
+	
+	<div class="col-sm-offset-2 col-sm-10" >
+		<input type="submit" class="btn btn-primary" value="Save"/>
+	</div>
+		
+</div>

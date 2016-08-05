@@ -1,0 +1,12 @@
+<div th:fragment="main_content">
+
+	<div class="container pad-top">
+		
+		<h3>Edit a movie</h3>
+		<br/><br/>
+		<form th:action="@{/movies/update/} + ${movie.id}" th:object="${movie}" method="POST">
+			<div th:replace="templates/forms/movie_form :: movie_form" />
+		</form>
+		
+	</div>
+</div>

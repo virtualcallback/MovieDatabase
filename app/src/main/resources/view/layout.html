@@ -1,0 +1,25 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<!-- Import Head -->
+	<div th:replace="templates/structure/head :: head" />
+	
+	<body>
+	
+	<!-- Import Header -->
+	<div th:replace="templates/structure/header :: header" />
+	
+	<div class="container">
+		
+		<!-- Our App main content -->
+		<div th:replace="${view} :: main_content" />
+		
+		<!-- Import Footer -->
+		<div th:replace="templates/structure/footer :: footer" />
+		
+	</div>
+	
+	</body>
+
+
+
+</html>

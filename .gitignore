@@ -1,0 +1,8 @@
+.metadata/
+.recommenders/
+RemoteSystemsTempFiles/
+Servers/
+app/.settings/
+app/.classpath
+app/.project
+app/target/
